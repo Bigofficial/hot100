@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "vector": "cpp",
-        "limits": "c"
+        "limits": "c",
+        "unordered_map": "cpp"
     }
 }
