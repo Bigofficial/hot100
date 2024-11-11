@@ -353,6 +353,7 @@ TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
         return nullptr;
 }
 
+#if 0
 int ans = INT_MIN;
 int depth(TreeNode *root)
 {
@@ -371,3 +372,4 @@ int maxPathSum(TreeNode *root)
     depth(root);
     return ans;
 }
+#endif
