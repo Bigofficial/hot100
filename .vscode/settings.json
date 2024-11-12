@@ -3,6 +3,7 @@
         "vector": "cpp",
         "limits": "c",
         "unordered_map": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "stack": "cpp"
     }
 }
