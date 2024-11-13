@@ -13,19 +13,19 @@ using namespace std;
 
 int lengthOfLongestSubstring(string s)
 {
-    unordered_map<char, int> hash; // num index
-    int l = 0;
+    unordered_map<char, int> hash; // char ,index
     int ans = 0;
-    for (int r = 0; r < s.size(); r++)
+    int l = 0, r = 0;
+    while (r < s.size())
     {
         char c = s[r];
         if (hash.count(c) && hash[c] >= l)
         {
-            // 我们没有移除,只能hash[c]>=l
             l = hash[c] + 1;
         }
         hash[c] = r;
-        ans = max(ans, r - l + 1);
+        r++;
+        ans = max(ans, r - l);
     }
     return ans;
 }
@@ -46,7 +46,7 @@ vector<int> findAnagrams(string s, string p)
     while (i < s.size())
     {
         char c = s[i];
-        i++;
+
         if (need.count(c))
         {
             // 有这个元素的话
@@ -75,6 +75,7 @@ vector<int> findAnagrams(string s, string p)
                 hash[d]--;
             }
         }
+        i++;
     }
     return result;
 }
