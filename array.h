@@ -10,7 +10,7 @@
 #include <unordered_map>
 #include <unordered_set>
 using namespace std;
-
+#define INT_MIN -9999999
 int maxSubArray(vector<int> &nums)
 {
 
